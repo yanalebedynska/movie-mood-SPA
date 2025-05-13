@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoodMovies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🎬 MoodMovies</h1>
+
+    <div class="container">
+        <div class="controls">
+            <label class="label-block">Choose Mood:</label>
+            <select id="mood">
+                <option value="joy">😊 Joy</option>
+                <option value="sad">😢 Sadness</option>
+                <option value="anger">😠 Anger</option>
+            </select>
+            <button id="fetch-movies">Find Movies</button>
+        </div>
+    </div>
+
+    <div id="live-feed">
+        ----------------------------------
+        <div id="live-feed-content"></div>
+    </div>
+
+    <div class="blocks-wrapper">
+        <div class="film-block">
+            <h2>Recommended Movies:</h2>
+            <div id="movies-list"></div>
+        </div>
+        <div class="film-block small">
+            <h2>Details:</h2>
+            <div id="movie-details"></div>
+        </div>
+        <div class="film-block">
+            <h2>Similar Movies:</h2>
+            <div id="similar-movies"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="socket.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
